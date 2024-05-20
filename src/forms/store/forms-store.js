@@ -6,9 +6,8 @@ const state = {
 }
 
 const loadNextPage = async () => {
-    const forms = await load( state.currentPage + 1 );
+    const forms = await load();
     if ( forms.length === 0 ) return;
-    state.currentPage += 1;
     state.forms = forms;
 }
 
