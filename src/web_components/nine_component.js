@@ -1,7 +1,7 @@
 import { LitElement, html } from "lit";
-import "./seven_component.js";
+import "./ten_component.js";
 
-class SixComponent extends LitElement {
+class NineComponent extends LitElement {
   static get properties() {
     return {
       first: { type: Boolean },
@@ -26,37 +26,41 @@ class SixComponent extends LitElement {
             <style>
               @import "../src/web_components/styles_components.css";
             </style>
-            <section class="page5">
-              <h2>5/10</h2>
-              <h1>¿Tu App necesita un sistema de login?</h1>
+            <section class="page8">
+              <h2>8/10</h2>
+              <h1>¿Tu App necesita un panel de administración?</h1>
               <div class="container-option">
                 <div @click="${this.btnClick}" class="option">
                   <img
                     class="img-option"
-                    src="imgs/img-logRedesEmail.png"
+                    src="imgs/img-panelAdmiSi.png"
                     alt=""
                   />
-                  <p>Sí, con redese sociales y email</p>
+                  <p>Sí</p>
                 </div>
                 <div @click="${this.btnClick}" class="option">
-                  <img class="img-option" src="imgs/img-logEmail.png" alt="" />
-                  <p>Sí, con email</p>
-                </div>
-                <div @click="${this.btnClick}" class="option">
-                  <img class="img-option" src="imgs/img-logNO.png" alt="" />
+                  <img
+                    class="img-option"
+                    src="imgs/img-panelAdmiNo.png"
+                    alt=""
+                  />
                   <p>No</p>
                 </div>
                 <div @click="${this.btnClick}" class="option">
-                  <img class="img-option" src="imgs/img-logNoSabe.png" alt="" />
-                  <p>No lo sé todavía</p>
+                  <img
+                    class="img-option"
+                    src="imgs/img-panelAdmiNose.png"
+                    alt=""
+                  />
+                  <p>No lo sé</p>
                 </div>
               </div>
             </section>
           `
         : ""}
-      ${this.second ? html`<seven-component></seven-component>` : ""}
+      ${this.second ? html`<ten-component></ten-component>` : ""}
     `;
   }
 }
 
-customElements.define("six-component", SixComponent);
+customElements.define("nine-component", NineComponent);
