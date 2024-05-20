@@ -130,16 +130,12 @@ p {
 @media (min-width: 992px) {
   .container-option {
     display: flex;
-    flex-wrap: wrap; /* Permitir que los elementos se envuelvan cuando no quepan en una sola fila */
-    justify-content: center; /* Centrar los elementos */
-    gap: 15px; /* Espacio entre los elementos */
+    flex-direction: row; 
   }
-
-  .container-option > * {
-    flex: 1 1 auto; /* Permitir que los elementos se ajusten según el ancho disponible */
-    max-width: 45%; /* Limitar el ancho de cada elemento */
+  .container-option > *:nth-child(odd):last-child{
+    width: 100%;
   }
-
+  
   .img-option {
     width: 150px;
     height: 150px;
