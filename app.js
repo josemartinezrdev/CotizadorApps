@@ -1,1 +1,1 @@
-import "./src/ejm-component";
+import "./src/web_components/home_component";
