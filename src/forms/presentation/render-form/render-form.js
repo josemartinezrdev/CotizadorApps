@@ -1,6 +1,6 @@
 import formHtml from './render-form.html?raw';
 import './render-form.css';
-import { Form } from '../../models/form';
+import { InsForm } from '../../models/form';
 import { getFormByid } from '../../form-cases/get-form-by-id';
 
 let forms, frm;

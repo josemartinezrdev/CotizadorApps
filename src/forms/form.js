@@ -1,4 +1,4 @@
-export class Form {
+export class InsForm {
     /**
      * 
      * @param {Like<Form>} formDataLike 

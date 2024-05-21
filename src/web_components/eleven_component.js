@@ -32,7 +32,6 @@ class ElevenComponent extends LitElement {
             <style>
               @import "../src/web_components/styles_components.css";
             </style>
-
             <section class="page10">
               <div class="container-top">
                 <button @click="${this.btnBack}" class="back">← Anterior</button>
@@ -41,19 +40,19 @@ class ElevenComponent extends LitElement {
               </div>
               <h1>¿En qué estado se encuentra tu proyecto?</h1>
               <div class="container-option">
-                <div class="option">
+                <div @click="${this.btnClick}" class="option">
                   <img class="img-option" src="imgs/img-idea.png" alt="" />
                   <p>Sólo es una idea</p>
                 </div>
-                <div class="option">
+                <div @click="${this.btnClick}" class="option">
                   <img class="img-option" src="imgs/img-boseto.png" alt="" />
                   <p>Boseto ya preparado</p>
                 </div>
-                <div class="option">
+                <div @click="${this.btnClick}" class="option">
                   <img class="img-option" src="imgs/img-apDesarrollo.png" alt="" />
                   <p>App en desarrollo</p>
                 </div>
-                <div class="option">
+                <div @click="${this.btnClick}" class="option">
                   <img class="img-option" src="imgs/img-appDesarrollada.png" alt="" />
                   <p>App ya desarrollada</p>
                 </div>
