@@ -7,4 +7,11 @@
 }
 body {
   background-color: #3d3935;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+

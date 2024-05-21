@@ -27,7 +27,11 @@ class SevenComponent extends LitElement {
               @import "../src/web_components/styles_components.css";
             </style>
             <section class="page6">
-              <h2>6/10</h2>
+              <div class="container-top">
+                <button class="back">← Anterior</button>
+                <h2>6/10</h2>
+                <h2 class="precio">0 COP</h2>
+              </div>
               <h1>¿Tu App tiene que estar integrada con un sitio web?</h1>
               <div class="container-option">
                 <div @click="${this.btnClick}" class="option">
@@ -35,19 +39,11 @@ class SevenComponent extends LitElement {
                   <p>Sí</p>
                 </div>
                 <div @click="${this.btnClick}" class="option">
-                  <img
-                    class="img-option"
-                    src="imgs/img-Nointegrada.png"
-                    alt=""
-                  />
+                  <img class="img-option" src="imgs/img-Nointegrada.png" alt="" />
                   <p>No</p>
                 </div>
                 <div @click="${this.btnClick}" class="option">
-                  <img
-                    class="img-option"
-                    src="imgs/img-Nointegrada.png"
-                    alt=""
-                  />
+                  <img class="img-option" src="imgs/img-Nointegrada.png" alt="" />
                   <p>No lo sé</p>
                 </div>
               </div>

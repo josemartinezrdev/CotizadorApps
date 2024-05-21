@@ -27,7 +27,11 @@ class SixComponent extends LitElement {
               @import "../src/web_components/styles_components.css";
             </style>
             <section class="page5">
+              <div class="container-top">
+              <button class="back">← Anterior</button>
               <h2>5/10</h2>
+              <h2 class="precio">0 COP</h2>
+            </div>
               <h1>¿Tu App necesita un sistema de login?</h1>
               <div class="container-option">
                 <div @click="${this.btnClick}" class="option">
