@@ -13,10 +13,16 @@ class NineComponent extends LitElement {
     super();
     this.first = true;
     this.second = false;
+    this.back = false;
   }
   btnClick() {
     this.first = !this.first;
     this.second = !this.second;
+  }
+  btnBack() {
+    this.first = false;
+    this.second = false;
+    this.back = true;
   }
 
   render() {
@@ -28,7 +34,7 @@ class NineComponent extends LitElement {
             </style>
             <section class="page8">
               <div class="container-top">
-                <button class="back">← Anterior</button>
+                <button @click="${this.btnBack}" class="back">← Anterior</button>
                 <h2>8/10</h2>
                 <h2 class="precio">0 COP</h2>
               </div>
@@ -50,7 +56,7 @@ class NineComponent extends LitElement {
             </section>
           `
         : ""}
-      ${this.second ? html`<ten-component></ten-component>` : ""}
+      ${this.second ? html`<ten-component></ten-component>` : ""} ${this.back ? html`<eight-component></eight-component>` : ""}
     `;
   }
 }

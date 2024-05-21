@@ -1,5 +1,6 @@
 import { LitElement, css, html } from "lit";
 import "./four_component.js";
+import "./two_component.js";
 
 class ThreeComponent extends LitElement {
   static get properties() {
@@ -13,10 +14,16 @@ class ThreeComponent extends LitElement {
     super();
     this.first = true;
     this.second = false;
+    this.back = false;
   }
   btnClick() {
     this.first = !this.first;
     this.second = !this.second;
+  }
+  btnBack() {
+    this.first = false;
+    this.second = false;
+    this.back = true;
   }
 
   render() {
@@ -28,7 +35,7 @@ class ThreeComponent extends LitElement {
             </style>
             <section class="page2">
               <div class="container-top">
-                <button class="back">← Anterior</button>
+                <button @click="${this.btnBack}" class="back">← Anterior</button>
                 <h2>2/10</h2>
               </div>
               <h1>¿Qué tipo de App necesitas?</h1>
@@ -57,7 +64,7 @@ class ThreeComponent extends LitElement {
             </section>
           `
         : ""}
-      ${this.second ? html`<four-component></four-component>` : ""}
+      ${this.second ? html`<four-component></four-component>` : ""} ${this.back ? html`<two-component></two-component>` : ""}
     `;
   }
 }

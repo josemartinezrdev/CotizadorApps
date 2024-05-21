@@ -52,6 +52,7 @@ class HomeComponent extends LitElement {
         max-height: 30vh;
       }
       section {
+        margin-top:20%;
         display: flex;
         flex-direction: column;
         justify-content: center;
