@@ -28,21 +28,34 @@ class TwoComponent extends LitElement {
             </style>
             <section class="page1">
               <div class="container-top">
-                <div class="empty"></div> <!-- este es un div vacio -->
+                <div class="empty"></div>
+                <!-- este es un div vacio -->
                 <h2>1/10</h2>
               </div>
               <h1 class="h1page1">¿Qué nivel de calidad estás buscando?</h1>
               <div class="container-option">
                 <div @click="${this.btnClick}" class="option">
-                  <img class="img-option" src="imgs/img-calidadO.png" alt="" />
+                  <img
+                    class="img-option"
+                    src="../../src/assets/imgs/img-calidad-alta.png"
+                    alt=""
+                  />
                   <p>Calidad Optima</p>
                 </div>
                 <div @click="${this.btnClick}" class="option">
-                  <img class="img-option" src="imgs/img-bnRelacion.png" alt="" />
+                  <img
+                    class="img-option"
+                    src="../../src/assets/imgs/img-calidad-media.png"
+                    alt=""
+                  />
                   <p>Buena Relación Calidad/Precio</p>
                 </div>
                 <div @click="${this.btnClick}" class="option">
-                  <img class="img-option" src="imgs/img-npCalidad.png" alt="" />
+                  <img
+                    class="img-option"
+                    src="../../src/assets/imgs/img-calidad-baja.png"
+                    alt=""
+                  />
                   <p>No me importa tanto la calidad</p>
                 </div>
               </div>

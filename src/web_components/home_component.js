@@ -25,7 +25,11 @@ class HomeComponent extends LitElement {
       ${this.first
         ? html`
             <section class="initial">
-              <img class="intro-img" src="imgs/intro.png" alt="" />
+              <img
+                class="intro-img"
+                src="../../src/assets/imgs/img-intro.png"
+                alt=""
+              />
               <h1 class="title-intro">
                 ¿Cuánto cuesta desarrollar mi <strong>app</strong>?
               </h1>
@@ -52,7 +56,7 @@ class HomeComponent extends LitElement {
         max-height: 30vh;
       }
       section {
-        margin-top:20%;
+        margin-top: 20%;
         display: flex;
         flex-direction: column;
         justify-content: center;

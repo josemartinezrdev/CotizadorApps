@@ -34,22 +34,36 @@ class EightComponent extends LitElement {
             </style>
             <section class="page7">
               <div class="container-top">
-                <button @click="${this.btnBack}" class="back">← Anterior</button>
+                <button @click="${this.btnBack}" class="back">
+                  ← Anterior
+                </button>
                 <h2>7/10</h2>
                 <h2 class="precio">0 COP</h2>
               </div>
               <h1>¿Los usuarios tienen sus propios perfiles?</h1>
               <div class="container-option">
                 <div @click="${this.btnClick}" class="option">
-                  <img class="img-option" src="imgs/img-perfilSi.png" alt="" />
+                  <img
+                    class="img-option"
+                    src="../../src/assets/imgs/img-si-perfil.png"
+                    alt=""
+                  />
                   <p>Sí</p>
                 </div>
                 <div @click="${this.btnClick}" class="option">
-                  <img class="img-option" src="imgs/img-perfilNo.png" alt="" />
+                  <img
+                    class="img-option"
+                    src="../../src/assets/imgs/img-no-perfil.png"
+                    alt=""
+                  />
                   <p>No</p>
                 </div>
                 <div @click="${this.btnClick}" class="option">
-                  <img class="img-option" src="imgs/img-perfilNose.png" alt="" />
+                  <img
+                    class="img-option"
+                    src="../../src/assets/imgs/img-perfil-pregunta.png"
+                    alt=""
+                  />
                   <p>No lo sé</p>
                 </div>
               </div>

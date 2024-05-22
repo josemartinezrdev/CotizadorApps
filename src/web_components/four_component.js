@@ -13,7 +13,7 @@ class FourComponent extends LitElement {
     super();
     this.first = true;
     this.second = false;
-    this.back= false;
+    this.back = false;
   }
   btnClick() {
     this.first = !this.first;
@@ -22,7 +22,7 @@ class FourComponent extends LitElement {
   btnBack() {
     this.first = false;
     this.second = false;
-    this.back= true;
+    this.back = true;
   }
 
   render() {
@@ -33,21 +33,27 @@ class FourComponent extends LitElement {
               @import "../src/web_components/styles_components.css";
             </style>
             <section class="page3">
-            <div class="container-top">
-                <button @click="${this.btnBack}" class="back">← Anterior</button>
+              <div class="container-top">
+                <button @click="${this.btnBack}" class="back">
+                  ← Anterior
+                </button>
                 <h2>3/10</h2>
                 <h2 class="precio">0 COP</h2>
               </div>
               <h1>¿Qué diseño quieres que tenga tu App?</h1>
               <div class="container-option">
                 <div @click="${this.btnClick}" class="option">
-                  <img class="img-option" src="imgs/img-Isencilla.png" alt="" />
+                  <img
+                    class="img-option"
+                    src="../../src/assets/imgs/img-diseño-sencillo.png"
+                    alt=""
+                  />
                   <p>Interfaz sencilla</p>
                 </div>
                 <div @click="${this.btnClick}" class="option">
                   <img
                     class="img-option"
-                    src="imgs/img-iPersonalizada.png"
+                    src="../../src/assets/imgs/img-diseño-personalizado.png"
                     alt=""
                   />
                   <p>Interfaz personalizada</p>
@@ -55,13 +61,17 @@ class FourComponent extends LitElement {
                 <div @click="${this.btnClick}" class="option">
                   <img
                     class="img-option"
-                    src="imgs/img-Ireplicada.png"
+                    src="../../src/assets/imgs/img-si-replica.png"
                     alt=""
                   />
                   <p>Interfaz replicada de la web</p>
                 </div>
                 <div @click="${this.btnClick}" class="option">
-                  <img class="img-option" src="imgs/img-npDiseño.png" alt="" />
+                  <img
+                    class="img-option"
+                    src="../../src/assets/imgs/img-no-diseño.png"
+                    alt=""
+                  />
                   <p>No necesito diseño</p>
                 </div>
               </div>

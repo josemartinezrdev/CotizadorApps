@@ -34,26 +34,44 @@ class ElevenComponent extends LitElement {
             </style>
             <section class="page10">
               <div class="container-top">
-                <button @click="${this.btnBack}" class="back">← Anterior</button>
+                <button @click="${this.btnBack}" class="back">
+                  ← Anterior
+                </button>
                 <h2>10/10</h2>
                 <h2 class="precio">0 COP</h2>
               </div>
               <h1>¿En qué estado se encuentra tu proyecto?</h1>
               <div class="container-option">
                 <div @click="${this.btnClick}" class="option">
-                  <img class="img-option" src="imgs/img-idea.png" alt="" />
+                  <img
+                    class="img-option"
+                    src="../../src/assets/imgs/img-app-idea.png"
+                    alt=""
+                  />
                   <p>Sólo es una idea</p>
                 </div>
                 <div @click="${this.btnClick}" class="option">
-                  <img class="img-option" src="imgs/img-boseto.png" alt="" />
+                  <img
+                    class="img-option"
+                    src="../../src/assets/imgs/img-app-boceto.png"
+                    alt=""
+                  />
                   <p>Boseto ya preparado</p>
                 </div>
                 <div @click="${this.btnClick}" class="option">
-                  <img class="img-option" src="imgs/img-apDesarrollo.png" alt="" />
+                  <img
+                    class="img-option"
+                    src="../../src/assets/imgs/img-app-desarrollo.png"
+                    alt=""
+                  />
                   <p>App en desarrollo</p>
                 </div>
                 <div @click="${this.btnClick}" class="option">
-                  <img class="img-option" src="imgs/img-appDesarrollada.png" alt="" />
+                  <img
+                    class="img-option"
+                    src="../../src/assets/imgs/img-app-desarrollada.png"
+                    alt=""
+                  />
                   <p>App ya desarrollada</p>
                 </div>
               </div>

@@ -13,7 +13,7 @@ class SevenComponent extends LitElement {
     super();
     this.first = true;
     this.second = false;
-    this.back= false;
+    this.back = false;
   }
   btnClick() {
     this.first = !this.first;
@@ -22,7 +22,7 @@ class SevenComponent extends LitElement {
   btnBack() {
     this.first = false;
     this.second = false;
-    this.back= true;
+    this.back = true;
   }
 
   render() {
@@ -34,22 +34,36 @@ class SevenComponent extends LitElement {
             </style>
             <section class="page6">
               <div class="container-top">
-                <button @click="${this.btnBack}" class="back">← Anterior</button>
+                <button @click="${this.btnBack}" class="back">
+                  ← Anterior
+                </button>
                 <h2>6/10</h2>
                 <h2 class="precio">0 COP</h2>
               </div>
               <h1>¿Tu App tiene que estar integrada con un sitio web?</h1>
               <div class="container-option">
                 <div @click="${this.btnClick}" class="option">
-                  <img class="img-option" src="imgs/img-integrada.png" alt="" />
+                  <img
+                    class="img-option"
+                    src="../../src/assets/imgs/img-si-integrada.png"
+                    alt=""
+                  />
                   <p>Sí</p>
                 </div>
                 <div @click="${this.btnClick}" class="option">
-                  <img class="img-option" src="imgs/img-Nointegrada.png" alt="" />
+                  <img
+                    class="img-option"
+                    src="../../src/assets/imgs/img-no-integrada.png"
+                    alt=""
+                  />
                   <p>No</p>
                 </div>
                 <div @click="${this.btnClick}" class="option">
-                  <img class="img-option" src="imgs/img-Nointegrada.png" alt="" />
+                  <img
+                    class="img-option"
+                    src="../../src/assets/imgs/img-integrada-pregunta.png"
+                    alt=""
+                  />
                   <p>No lo sé</p>
                 </div>
               </div>
