@@ -88,6 +88,8 @@ class TwelveComponent extends LitElement {
         } catch (error) {
             console.error('Error al enviar los datos:', error);
         }
+
+        this
     }
 
     static styles = css`

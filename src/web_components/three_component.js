@@ -1,12 +1,15 @@
 import { LitElement, css, html } from "lit";
 import "./four_component.js";
 import "./two_component.js";
+import "./desktop-component.js";
 
 class ThreeComponent extends LitElement {
   static get properties() {
     return {
       first: { type: Boolean },
       second: { type: Boolean },
+      back: { type: Boolean },
+      desk: { type: Boolean },
     };
   }
 
@@ -15,6 +18,7 @@ class ThreeComponent extends LitElement {
     this.first = true;
     this.second = false;
     this.back = false;
+    this.desk = false;
   }
   btnClick() {
     this.first = !this.first;
@@ -24,6 +28,12 @@ class ThreeComponent extends LitElement {
     this.first = false;
     this.second = false;
     this.back = true;
+  }
+  btnDesk() {
+    this.first = false;
+    this.second = false;
+    this.back = false;
+    this.desk = true;
   }
 
   render() {
@@ -74,20 +84,17 @@ class ThreeComponent extends LitElement {
                   />
                   <p>Aplicación Androi + iOS</p>
                 </div>
-                <div @click="${this.btnClick}" class="option">
-                  <img
-                    class="img-option"
-                    src="../../src/assets/imgs/img-escritorio.webp"
-                    alt=""
-                  />
+                <div @click="${this.btnDesk}" class="option">
+                  <img class="img-option" src="../../src/assets/imgs/img-escritorio.webp" alt="" />
                   <p>Aplicación de Escritorio</p>
                 </div>
               </div>
             </section>
           `
         : ""}
-      ${this.second ? html`<four-component></four-component>` : ""}
+      ${this.second ? html`<four-component></four-component>` : ""} 
       ${this.back ? html`<two-component></two-component>` : ""}
+      ${this.desk ? html`<desktop-component></desktop-component>` : ""}
     `;
   }
 }
