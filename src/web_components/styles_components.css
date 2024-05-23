@@ -15,6 +15,7 @@
   border-radius: 2px;
   cursor: pointer;
 }
+
 .back {
   background-color: #3d3935;
   border: none;
@@ -22,11 +23,13 @@
   font-size: 1.2rem;
   cursor: pointer;
 }
+
 .container-top {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
+
 section {
   display: flex;
   flex-direction: column;
@@ -37,34 +40,41 @@ section {
   min-width: 100%;
   gap: 10px;
 }
+
 h1 {
   margin-top: 10%;
   font-size: 28px;
   font-weight: 700;
 }
+
 h2 {
   font-weight: 700;
 }
+
 h1,
 h2,
 p {
   color: white;
 }
+
 .option:hover {
   background-color: #514d4a;
   scale: 1.02;
   transition-duration: 1s;
 }
+
 @media (min-width: 678px) {
   .container-option {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
   }
+
   .container-top {
     margin-bottom: 5%;
   }
-  .container-option > *:nth-child(odd):last-child {
+
+  .container-option>*:nth-child(odd):last-child {
     grid-column: 1 / span 2;
     justify-self: center;
     display: flex;
@@ -75,28 +85,34 @@ p {
     box-sizing: border-box;
     text-align: center;
   }
+
   .container-top:first-child .back {
     text-align: start;
     padding-left: 50px;
   }
+
   .container-top:first-child .precio {
     text-align: end;
     padding-right: 50px;
   }
+
   .img-option {
     width: 100px;
     height: 100px;
   }
+
   h1 {
     font-size: 32px;
   }
 }
+
 @media (min-width: 1285px) {
   .container-option {
     display: flex;
     flex-direction: row;
   }
-  .container-option > *:nth-child(odd):last-child {
+
+  .container-option>*:nth-child(odd):last-child {
     width: 100%;
   }
 
@@ -106,6 +122,7 @@ p {
     margin-right: 0;
     margin-bottom: 1em;
   }
+
   h1 {
     font-size: 40px;
   }

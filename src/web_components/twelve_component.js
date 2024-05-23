@@ -1,7 +1,7 @@
 import { LitElement, css, html } from 'lit';
 import './eleven_component.js';
 import './home_component.js';
-import {InsForm} from '../forms/form.js';
+import { InsForm } from '../forms/form.js';
 
 class TwelveComponent extends LitElement {
     static get properties() {
@@ -10,7 +10,6 @@ class TwelveComponent extends LitElement {
             second: { type: Boolean },
         };
     }
-
     constructor() {
         super();
         this.first = true;
@@ -22,7 +21,7 @@ class TwelveComponent extends LitElement {
     }
     render() {
         return html`${this.first
-        ? html`
+            ? html`
             <div class="form-container">
                 <div class="form-dialog">
                     <form @submit="${this._handleSubmit.bind(this)}"> 
@@ -37,19 +36,17 @@ class TwelveComponent extends LitElement {
                         <input type="text" id="country" name="country" placeholder="Pais" required/>
                         <span>Ciudad</span>
                         <input type="text" id="city" name="city" placeholder="Ciudad" required/>
-                        <span>Precio</span>
-                        <input type="number" id="cost" name="cost" placeholder="Precio" required>
                         <div>
                             <p id="cost">Precio</p>
                         </div>
-                        <button type="submit">
+                        <button id="continuar" type="submit">
                             Continuar
                         </button>
                     </form>
                 </div>
             </div>
         `
-        : ""}
+            : ""}
         `;
     }
 
@@ -58,7 +55,7 @@ class TwelveComponent extends LitElement {
 
         const form = this.shadowRoot.querySelector('form');
         const formData = new FormData(form);
-
+        console.log(formData);
         const data = new InsForm({
             id: Date.now().toString(), // Generar un ID único, si es necesario
             name: formData.get('name'),
@@ -92,14 +89,11 @@ class TwelveComponent extends LitElement {
             console.error('Error al enviar los datos:', error);
         }
     }
-    
+
     static styles = css`
         @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
         .form-container {
-            position: fixed;
-            top: 0px;
-            left: 0px;
             width: 100vw;
             height: 100vh;
             display: flex;
@@ -113,7 +107,7 @@ class TwelveComponent extends LitElement {
             width: 60vw;
             background-color: white;
             border-radius: 5px;
-            padding: 20px;
+            padding: 10px;
             box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2);
         }
         
@@ -124,21 +118,21 @@ class TwelveComponent extends LitElement {
         }
         
         ::placeholder {
-            font-size: 40px;
+            font-size: 15px;
         }
         
         input {
             width: 90%;
-            height: 80px;
-            margin: 20px;
-            font-size: 35px;
+            height: 20px;
+            margin: 10px;
+            font-size: 15px;
         }
         
         span {
-            font-size: 40px;
+            font-size: 15px;
         }
         
-        button {
+        #continuar {
             max-width: 50%;
             margin: 0.5em 0;
             border-radius: 5px;
@@ -149,57 +143,37 @@ class TwelveComponent extends LitElement {
             background-image: linear-gradient(to left, #14e6d3, #8660f5);
             border: 0;
             color: white;
-            font-size: 40px;
+            font-size: 18px;
             font-weight: 700;
             box-sizing: inherit;
         }
         
         #cost {
             color: #14e2cd;
-            font-size: 70px;
+            font-size: 25px;
             font-weight: 700;
+            margin: 10px;
         }
-        
-        @media (min-width: 600px) {
-            span {
-                font-size: 30px;
+        @media (min-width: 678px) {
+            ::placeholder {
+                font-size: 20px;
             }
+            
             input {
-                width: 90%;
                 height: 30px;
-                margin: 20px;
+                font-size: 20px;
+            }
+            
+            span {
+                font-size: 25px;
+            }  
+            #continuar {
                 font-size: 28px;
             }
-            ::placeholder {
-                font-size: 30px;
-            }
-            button {
+            
+            #cost {
                 font-size: 35px;
-            }
-            #cost {
-                font-size: 60px;
-            }
-        }
-        
-        @media (min-width: 1000px) {
-            span {
-                font-size: 20px;
-            }
-            input {
-                width: 90%;
-                height: 30px;
-                margin: 20px;
-                font-size: 18px;
-            }
-            ::placeholder {
-                font-size: 20px;
-            }
-            button {
-                font-size: 25px;
-            }
-            #cost {
-                font-size: 50px;
-            }
+            }  
         }
     `;
 }
