@@ -14,12 +14,27 @@ class NineComponent extends LitElement {
     this.first = true;
     this.second = false;
     this.back = false;
+    window.price = globalPrice.reduce((acc, num) => acc + num, 0);
   }
-  btnClick() {
+
+  btnClick(id) {
+    if (id === "panel-si") {
+      window.globalPrice.push(3000);
+      window.globalSettings.optPanel = "Con Panel Admin";
+    } else if (id === "panel-no") {
+      window.globalPrice.push(0);
+      window.globalSettings.optPanel = "Sin Panel Admin";
+    } else if (id === "panel-no-se") {
+      window.globalPrice.push(800);
+      window.globalSettings.optPanel = "No se";
+    }
+
     this.first = !this.first;
     this.second = !this.second;
   }
+
   btnBack() {
+    window.globalPrice.pop();
     this.first = false;
     this.second = false;
     this.back = true;
@@ -38,11 +53,11 @@ class NineComponent extends LitElement {
                   ← Anterior
                 </button>
                 <h2>8/10</h2>
-                <h2 class="precio">0 COP</h2>
+                <h2 class="precio">${window.price} COP</h2>
               </div>
               <h1>¿Tu App necesita un panel de administración?</h1>
               <div class="container-option">
-                <div @click="${this.btnClick}" class="option">
+                <div @click="${() => this.btnClick("panel-si")}" class="option">
                   <img
                     class="img-option"
                     src="../../src/assets/imgs/img-si-panel.png"
@@ -50,7 +65,7 @@ class NineComponent extends LitElement {
                   />
                   <p>Sí</p>
                 </div>
-                <div @click="${this.btnClick}" class="option">
+                <div @click="${() => this.btnClick("panel-no")}" class="option">
                   <img
                     class="img-option"
                     src="../../src/assets/imgs/img-no-panel.png"
@@ -58,7 +73,10 @@ class NineComponent extends LitElement {
                   />
                   <p>No</p>
                 </div>
-                <div @click="${this.btnClick}" class="option">
+                <div
+                  @click="${() => this.btnClick("panel-no-se")}"
+                  class="option"
+                >
                   <img
                     class="img-option"
                     src="../../src/assets/imgs/img-panel-pregunta.png"

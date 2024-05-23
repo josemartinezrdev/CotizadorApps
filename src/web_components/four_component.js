@@ -1,4 +1,4 @@
-import { LitElement, css, html } from "lit";
+import { LitElement, html } from "lit";
 import "./five_component.js";
 
 class FourComponent extends LitElement {
@@ -14,12 +14,34 @@ class FourComponent extends LitElement {
     this.first = true;
     this.second = false;
     this.back = false;
+    window.price = globalPrice.reduce((acc, num) => acc + num, 0);
   }
-  btnClick() {
+
+  btnClick(id) {
+    if (id === "sencilla") {
+      window.globalPrice.push(1000);
+      window.globalSettings.optInterface = "Interfaz Sencilla";
+    } else if (id === "personalizada") {
+      window.globalPrice.push(3000);
+      window.globalSettings.optInterface = "Interfaz Personalizada";
+    } else if (id === "replica") {
+      window.globalPrice.push(5000);
+      window.globalSettings.optInterface = "Interfaz Replica Web";
+    } else if (id === "no-diseño") {
+      window.globalPrice.push(0);
+      window.globalSettings.optInterface = "Sin Diseño";
+    }
+
     this.first = !this.first;
     this.second = !this.second;
   }
+
   btnBack() {
+    window.globalPrice.pop();
+    if (window.isDesk === true) {
+      window.globalPrice.pop();
+      window.isDesk = false;
+    }
     this.first = false;
     this.second = false;
     this.back = true;
@@ -38,11 +60,11 @@ class FourComponent extends LitElement {
                   ← Anterior
                 </button>
                 <h2>3/10</h2>
-                <h2 class="precio">0 COP</h2>
+                <h2 class="precio">${window.price} COP</h2>
               </div>
               <h1>¿Qué diseño quieres que tenga tu App?</h1>
               <div class="container-option">
-                <div @click="${this.btnClick}" class="option">
+                <div @click="${() => this.btnClick("sencilla")}" class="option">
                   <img
                     class="img-option"
                     src="../../src/assets/imgs/img-diseño-sencillo.png"
@@ -50,7 +72,10 @@ class FourComponent extends LitElement {
                   />
                   <p>Interfaz sencilla</p>
                 </div>
-                <div @click="${this.btnClick}" class="option">
+                <div
+                  @click="${() => this.btnClick("personalizada")}"
+                  class="option"
+                >
                   <img
                     class="img-option"
                     src="../../src/assets/imgs/img-diseño-personalizado.png"
@@ -58,7 +83,7 @@ class FourComponent extends LitElement {
                   />
                   <p>Interfaz personalizada</p>
                 </div>
-                <div @click="${this.btnClick}" class="option">
+                <div @click="${() => this.btnClick("replica")}" class="option">
                   <img
                     class="img-option"
                     src="../../src/assets/imgs/img-si-replica.png"
@@ -66,7 +91,10 @@ class FourComponent extends LitElement {
                   />
                   <p>Interfaz replicada de la web</p>
                 </div>
-                <div @click="${this.btnClick}" class="option">
+                <div
+                  @click="${() => this.btnClick("no-diseño")}"
+                  class="option"
+                >
                   <img
                     class="img-option"
                     src="../../src/assets/imgs/img-no-diseño.png"

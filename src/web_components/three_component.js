@@ -1,4 +1,4 @@
-import { LitElement, css, html } from "lit";
+import { LitElement, html } from "lit";
 import "./four_component.js";
 import "./two_component.js";
 import "./desktop-component.js";
@@ -19,21 +19,42 @@ class ThreeComponent extends LitElement {
     this.second = false;
     this.back = false;
     this.desk = false;
+    window.price = globalPrice.reduce((acc, num) => acc + num, 0);
   }
-  btnClick() {
+
+  btnClick(id) {
+    if (id === "android") {
+      window.globalPrice.push(5000);
+      window.globalSettings.optTipoApp = "App Android";
+    } else if (id === "ios") {
+      window.globalPrice.push(6000);
+      window.globalSettings.optTipoApp = "App IOS";
+    } else if (id === "windows") {
+      window.globalPrice.push(6500);
+      window.globalSettings.optTipoApp = "App Windows";
+    } else if (id === "android-ios") {
+      window.globalPrice.push(10000);
+      window.globalSettings.optTipoApp = "App Android - IOS";
+    }
+
     this.first = !this.first;
     this.second = !this.second;
   }
+
   btnBack() {
+    window.globalPrice.pop();
     this.first = false;
     this.second = false;
     this.back = true;
   }
+
   btnDesk() {
     this.first = false;
     this.second = false;
     this.back = false;
     this.desk = true;
+    window.globalPrice.push(5000);
+    window.globalSettings.optTipoApp = "App Desktop";
   }
 
   render() {
@@ -52,7 +73,7 @@ class ThreeComponent extends LitElement {
               </div>
               <h1>¿Qué tipo de App necesitas?</h1>
               <div class="container-option">
-                <div @click="${this.btnClick}" class="option">
+                <div @click="${() => this.btnClick("android")}" class="option">
                   <img
                     class="img-option"
                     src="../../src/assets/imgs/img-android.png"
@@ -60,7 +81,7 @@ class ThreeComponent extends LitElement {
                   />
                   <p>Aplicación Android</p>
                 </div>
-                <div @click="${this.btnClick}" class="option">
+                <div @click="${() => this.btnClick("ios")}" class="option">
                   <img
                     class="img-option"
                     src="../../src/assets/imgs/img-ios.png"
@@ -68,7 +89,7 @@ class ThreeComponent extends LitElement {
                   />
                   <p>Aplicación iOS</p>
                 </div>
-                <div @click="${this.btnClick}" class="option">
+                <div @click="${() => this.btnClick("windows")}" class="option">
                   <img
                     class="img-option"
                     src="../../src/assets/imgs/img-windows.png"
@@ -76,7 +97,10 @@ class ThreeComponent extends LitElement {
                   />
                   <p>Aplicación Windows Phone</p>
                 </div>
-                <div @click="${this.btnClick}" class="option">
+                <div
+                  @click="${() => this.btnClick("android-ios")}"
+                  class="option"
+                >
                   <img
                     class="img-option"
                     src="../../src/assets/imgs/img-android-ios.png"
@@ -85,14 +109,18 @@ class ThreeComponent extends LitElement {
                   <p>Aplicación Androi + iOS</p>
                 </div>
                 <div @click="${this.btnDesk}" class="option">
-                  <img class="img-option" src="../../src/assets/imgs/img-escritorio.webp" alt="" />
+                  <img
+                    class="img-option"
+                    src="../../src/assets/imgs/img-escritorio.webp"
+                    alt=""
+                  />
                   <p>Aplicación de Escritorio</p>
                 </div>
               </div>
             </section>
           `
         : ""}
-      ${this.second ? html`<four-component></four-component>` : ""} 
+      ${this.second ? html`<four-component></four-component>` : ""}
       ${this.back ? html`<two-component></two-component>` : ""}
       ${this.desk ? html`<desktop-component></desktop-component>` : ""}
     `;

@@ -14,12 +14,27 @@ class SevenComponent extends LitElement {
     this.first = true;
     this.second = false;
     this.back = false;
+    window.price = globalPrice.reduce((acc, num) => acc + num, 0);
   }
-  btnClick() {
+
+  btnClick(id) {
+    if (id === "integrada-si") {
+      window.globalPrice.push(3500);
+      window.globalSettings.optIntegration = "Integrada";
+    } else if (id === "integrada-no") {
+      window.globalPrice.push(0);
+      window.globalSettings.optIntegration = "No Integrada";
+    } else if (id === "integrada-no-se") {
+      window.globalPrice.push(800);
+      window.globalSettings.optIntegration = "No se";
+    }
+
     this.first = !this.first;
     this.second = !this.second;
   }
+
   btnBack() {
+    window.globalPrice.pop();
     this.first = false;
     this.second = false;
     this.back = true;
@@ -38,11 +53,14 @@ class SevenComponent extends LitElement {
                   ← Anterior
                 </button>
                 <h2>6/10</h2>
-                <h2 class="precio">0 COP</h2>
+                <h2 class="precio">${window.price} COP</h2>
               </div>
               <h1>¿Tu App tiene que estar integrada con un sitio web?</h1>
               <div class="container-option">
-                <div @click="${this.btnClick}" class="option">
+                <div
+                  @click="${() => this.btnClick("integrada-si")}"
+                  class="option"
+                >
                   <img
                     class="img-option"
                     src="../../src/assets/imgs/img-si-integrada.png"
@@ -50,7 +68,10 @@ class SevenComponent extends LitElement {
                   />
                   <p>Sí</p>
                 </div>
-                <div @click="${this.btnClick}" class="option">
+                <div
+                  @click="${() => this.btnClick("integrada-no")}"
+                  class="option"
+                >
                   <img
                     class="img-option"
                     src="../../src/assets/imgs/img-no-integrada.png"
@@ -58,7 +79,10 @@ class SevenComponent extends LitElement {
                   />
                   <p>No</p>
                 </div>
-                <div @click="${this.btnClick}" class="option">
+                <div
+                  @click="${() => this.btnClick("integrada-no-se")}"
+                  class="option"
+                >
                   <img
                     class="img-option"
                     src="../../src/assets/imgs/img-integrada-pregunta.png"

@@ -14,12 +14,27 @@ class TenComponent extends LitElement {
     this.first = true;
     this.second = false;
     this.back = false;
+    window.price = globalPrice.reduce((acc, num) => acc + num, 0);
   }
-  btnClick() {
+
+  btnClick(id) {
+    if (id === "unico") {
+      window.globalPrice.push(500);
+      window.globalSettings.optIdioma = "Idioma Único";
+    } else if (id === "doble") {
+      window.globalPrice.push(2500);
+      window.globalSettings.optIdioma = "Bilingüe";
+    } else if (id === "triple") {
+      window.globalPrice.push(5000);
+      window.globalSettings.optIdioma = "Multilingüe";
+    }
+
     this.first = !this.first;
     this.second = !this.second;
   }
+
   btnBack() {
+    window.globalPrice.pop();
     this.first = false;
     this.second = false;
     this.back = true;
@@ -38,11 +53,11 @@ class TenComponent extends LitElement {
                   ← Anterior
                 </button>
                 <h2>9/10</h2>
-                <h2 class="precio">0 COP</h2>
+                <h2 class="precio">${window.price} COP</h2>
               </div>
               <h1>¿Qué idiomas usará tu aplicación?</h1>
               <div class="container-option">
-                <div @click="${this.btnClick}" class="option">
+                <div @click="${() => this.btnClick("unico")}" class="option">
                   <img
                     class="img-option"
                     src="../../src/assets/imgs/img-nativo.png"
@@ -50,7 +65,7 @@ class TenComponent extends LitElement {
                   />
                   <p>Un único idioma</p>
                 </div>
-                <div @click="${this.btnClick}" class="option">
+                <div @click="${() => this.btnClick("doble")}" class="option">
                   <img
                     class="img-option"
                     src="../../src/assets/imgs/img-billingue.png"
@@ -58,7 +73,7 @@ class TenComponent extends LitElement {
                   />
                   <p>Bilingüe</p>
                 </div>
-                <div @click="${this.btnClick}" class="option">
+                <div @click="${() => this.btnClick("triple")}" class="option">
                   <img
                     class="img-option"
                     src="../../src/assets/imgs/img-trilingüe.png"
