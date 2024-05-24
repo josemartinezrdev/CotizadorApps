@@ -10,7 +10,7 @@ export class InsForm {
         this.email = email;
         this.country = country;
         this.city = city;
-        this.cost = cost ?? null;
+        this.cost = cost;
         this.config = {
             calidad: config?.calidad ?? null,
             tipo: config?.tipo ?? null,
