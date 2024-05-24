@@ -47,7 +47,7 @@ class DeskComponent extends LitElement {
   render() {
     return html`
       <style>
-        @import "../src/web_components/styles_components.css";
+        @import "../../src/web_components/styles_components.css";
       </style>
       ${this.first
         ? html`
@@ -64,7 +64,7 @@ class DeskComponent extends LitElement {
                 <div @click="${() => this.btnClick("pwd")}" class="option">
                   <img
                     class="img-option"
-                    src="../../src/assets/imgs/img-app-pwd.png"
+                    src="../assets/imgs/img-app-pwd.png"
                     alt=""
                   />
                   <p>PWA</p>
@@ -72,7 +72,7 @@ class DeskComponent extends LitElement {
                 <div @click="${() => this.btnClick("spa")}" class="option">
                   <img
                     class="img-option"
-                    src="../../src/assets/imgs/img-app-spa.png"
+                    src="./assets/imgs/img-app-spa.png"
                     alt=""
                   />
                   <p>SPA</p>
