@@ -1,20 +1,5 @@
 /*-------- componente pagina, estos diseños se repiten para todas las páginas  -----------*/
-/* styles_components.css */
-.fade-enter,
-.fade-exit-active {
-  opacity: 0;
-}
 
-.fade-enter-active,
-.fade-exit {
-  opacity: 1;
-}
-
-.fade-enter-active,
-.fade-exit-active {
-  transition: opacity 0.5s ease-in-out;
-}
-/* ------------------------------------ */
 .img-option {
   width: 60px;
   height: 60px;
@@ -90,7 +75,7 @@ p {
     margin-bottom: 5%;
   }
 
-  .container-option>*:nth-child(odd):last-child {
+  .container-option > *:nth-child(odd):last-child {
     grid-column: 1 / span 2;
     justify-self: center;
     display: flex;
@@ -131,7 +116,7 @@ p {
     flex-direction: row;
   }
 
-  .container-option>*:nth-child(odd):last-child {
+  .container-option > *:nth-child(odd):last-child {
     width: 100%;
   }
   .option {
