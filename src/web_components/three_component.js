@@ -62,7 +62,7 @@ class ThreeComponent extends LitElement {
       ${this.first
         ? html`
             <style>
-              @import "../src/web_components/styles_components.css";
+              @import "./styles_components.css";
             </style>
             <section class="page2">
               <div class="container-top">
@@ -74,46 +74,26 @@ class ThreeComponent extends LitElement {
               <h1>¿Qué tipo de App necesitas?</h1>
               <div class="container-option">
                 <div @click="${() => this.btnClick("android")}" class="option">
-                  <img
-                    class="img-option"
-                    src="../../src/assets/imgs/img-android.png"
-                    alt=""
-                  />
+                  <img class="img-option" src="./img-android.png" alt="" />
                   <p>Aplicación Android</p>
                 </div>
                 <div @click="${() => this.btnClick("ios")}" class="option">
-                  <img
-                    class="img-option"
-                    src="../../src/assets/imgs/img-ios.png"
-                    alt=""
-                  />
+                  <img class="img-option" src="./img-ios.png" alt="" />
                   <p>Aplicación iOS</p>
                 </div>
                 <div @click="${() => this.btnClick("windows")}" class="option">
-                  <img
-                    class="img-option"
-                    src="../../src/assets/imgs/img-windows.png"
-                    alt=""
-                  />
+                  <img class="img-option" src="./img-windows.png" alt="" />
                   <p>Aplicación Windows Phone</p>
                 </div>
                 <div
                   @click="${() => this.btnClick("android-ios")}"
                   class="option"
                 >
-                  <img
-                    class="img-option"
-                    src="../../src/assets/imgs/img-android-ios.png"
-                    alt=""
-                  />
+                  <img class="img-option" src="./img-android-ios.png" alt="" />
                   <p>Aplicación Androi + iOS</p>
                 </div>
                 <div @click="${this.btnDesk}" class="option">
-                  <img
-                    class="img-option"
-                    src="../../src/assets/imgs/img-escritorio.webp"
-                    alt=""
-                  />
+                  <img class="img-option" src="./img-escritorio.webp" alt="" />
                   <p>Aplicación de Escritorio</p>
                 </div>
               </div>

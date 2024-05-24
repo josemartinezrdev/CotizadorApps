@@ -52,7 +52,7 @@ class TwoComponent extends LitElement {
       ${this.first
         ? html`
             <style>
-              @import "../src/web_components/styles_components.css";
+              @import "./styles_components.css";
             </style>
             <section class="page1">
               <div class="container-top">
@@ -66,11 +66,7 @@ class TwoComponent extends LitElement {
                   id="calidadOptima"
                   class="option"
                 >
-                  <img
-                    class="img-option"
-                    src="../../src/assets/imgs/img-calidad-alta.png"
-                    alt=""
-                  />
+                  <img class="img-option" src="./img-calidad-alta.png" alt="" />
                   <p>Calidad Optima</p>
                 </div>
                 <div
@@ -79,7 +75,7 @@ class TwoComponent extends LitElement {
                 >
                   <img
                     class="img-option"
-                    src="../../src/assets/imgs/img-calidad-media.png"
+                    src="./img-calidad-media.png"
                     alt=""
                   />
                   <p>Buena Relación Calidad/Precio</p>
@@ -88,11 +84,7 @@ class TwoComponent extends LitElement {
                   @click="${() => this.btnClick("calidadBaja")}"
                   class="option"
                 >
-                  <img
-                    class="img-option"
-                    src="../../src/assets/imgs/img-calidad-baja.png"
-                    alt=""
-                  />
+                  <img class="img-option" src="./img-calidad-baja.png" alt="" />
                   <p>No me importa tanto la calidad</p>
                 </div>
               </div>

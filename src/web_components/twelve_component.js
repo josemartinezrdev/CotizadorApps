@@ -16,21 +16,45 @@ class TwelveComponent extends LitElement {
     this.second = false;
     this.back = false;
     window.price = globalPrice.reduce((acc, num) => acc + num, 0);
-    console.log(globalPrice);
-    console.log(window.price);
-    console.table(globalSettings);
+    console.table(globalSettings.optTipoNewApp);
   }
   btnClick() {
     this.first = !this.first;
     this.second = !this.second;
-    globalPrice = [];
+    globalPrice = [0];
+    globalSettings = {
+      optCalidad: "Sin Seleccionar",
+      optTipoApp: "Sin Seleccionar",
+      optTipoNewApp: "No es desktop",
+      optInterface: "Sin Seleccionar",
+      optBeneficio: "Sin Seleccionar",
+      optLogin: "Sin Seleccionar",
+      optIntegration: "Sin Seleccionar",
+      optPerfiles: "Sin Seleccionar",
+      optPanel: "Sin Seleccionar",
+      optIdioma: "Sin Seleccionar",
+      optEstado: "Sin Seleccionar",
+    };
     window.price = 0;
   }
   btnBack() {
     this.first = false;
     this.second = false;
     this.back = true;
-    globalPrice = [];
+    globalPrice = [0];
+    globalSettings = {
+      optCalidad: "Sin Seleccionar",
+      optTipoApp: "Sin Seleccionar",
+      optTipoNewApp: "No es desktop",
+      optInterface: "Sin Seleccionar",
+      optBeneficio: "Sin Seleccionar",
+      optLogin: "Sin Seleccionar",
+      optIntegration: "Sin Seleccionar",
+      optPerfiles: "Sin Seleccionar",
+      optPanel: "Sin Seleccionar",
+      optIdioma: "Sin Seleccionar",
+      optEstado: "Sin Seleccionar",
+    };
     window.price = 0;
   }
   render() {
@@ -50,20 +74,16 @@ class TwelveComponent extends LitElement {
                   <a
                     href="https://www.facebook.com/?locale=es_LA"
                     target="_blank"
-                    ><img
-                      src="../../src/assets/imgs/facebook.png"
-                      alt="facebook"
+                    ><img src="./facebook.png" alt="facebook"
                   /></a>
                   <a href="https://co.linkedin.com/" target="_blank"
-                    ><img
-                      src="../../src/assets/imgs/linkedin.png"
-                      alt="linkedin"
+                    ><img src="./|linkedin.png" alt="linkedin"
                   /></a>
                   <a href="https://www.google.com/?hl=es" target="_blank"
-                    ><img src="../../src/assets/imgs/google.png" alt="google"
+                    ><img src="./google.png" alt="google"
                   /></a>
                   <a href="https://x.com/?lang=es" target="_blank"
-                    ><img src="../../src/assets/imgs/twitter.png" alt="twitter"
+                    ><img src="./twitter.png" alt="twitter"
                   /></a>
                 </div>
               </div>

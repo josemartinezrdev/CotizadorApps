@@ -48,7 +48,7 @@ class FiveComponent extends LitElement {
       ${this.first
         ? html`
             <style>
-              @import "../src/web_components/styles_components.css";
+              @import "./styles_components.css";
             </style>
             <section class="page4">
               <div class="container-top">
@@ -61,25 +61,17 @@ class FiveComponent extends LitElement {
               <h1>¿Cómo quieres sacar beneficio tu App?</h1>
               <div class="container-option">
                 <div @click="${() => this.btnClick("gratis")}" class="option">
-                  <img
-                    class="img-option"
-                    src="../../src/assets/imgs/img-no-pagos.png"
-                    alt=""
-                  />
+                  <img class="img-option" src="./img-no-pagos.png" alt="" />
                   <p>Aplicación gratuita con publicidad</p>
                 </div>
                 <div @click="${() => this.btnClick("pago")}" class="option">
-                  <img
-                    class="img-option"
-                    src="../../src/assets/imgs/img-si-pagos.png"
-                    alt=""
-                  />
+                  <img class="img-option" src="./img-si-pagos.png" alt="" />
                   <p>Aplicación de pago</p>
                 </div>
                 <div @click="${() => this.btnClick("compras")}" class="option">
                   <img
                     class="img-option"
-                    src="../../src/assets/imgs/img-compras-dentro.png"
+                    src="./img-compras-dentro.png"
                     alt=""
                   />
                   <p>Compras dentro de la App</p>
@@ -88,11 +80,7 @@ class FiveComponent extends LitElement {
                   @click="${() => this.btnClick("otros-no-se")}"
                   class="option"
                 >
-                  <img
-                    class="img-option"
-                    src="../../src/assets/imgs/img-otros.png"
-                    alt=""
-                  />
+                  <img class="img-option" src="./img-otros.png" alt="" />
                   <p>Otros/No lo sé todavía</p>
                 </div>
               </div>

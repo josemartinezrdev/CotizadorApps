@@ -52,7 +52,7 @@ class FourComponent extends LitElement {
       ${this.first
         ? html`
             <style>
-              @import "../src/web_components/styles_components.css";
+              @import "./styles_components.css";
             </style>
             <section class="page3">
               <div class="container-top">
@@ -67,7 +67,7 @@ class FourComponent extends LitElement {
                 <div @click="${() => this.btnClick("sencilla")}" class="option">
                   <img
                     class="img-option"
-                    src="../../src/assets/imgs/img-diseño-sencillo.png"
+                    src="./img-diseño-sencillo.png"
                     alt=""
                   />
                   <p>Interfaz sencilla</p>
@@ -78,28 +78,20 @@ class FourComponent extends LitElement {
                 >
                   <img
                     class="img-option"
-                    src="../../src/assets/imgs/img-diseño-personalizado.png"
+                    src="./img-diseño-personalizado.png"
                     alt=""
                   />
                   <p>Interfaz personalizada</p>
                 </div>
                 <div @click="${() => this.btnClick("replica")}" class="option">
-                  <img
-                    class="img-option"
-                    src="../../src/assets/imgs/img-si-replica.png"
-                    alt=""
-                  />
+                  <img class="img-option" src="./img-si-replica.png" alt="" />
                   <p>Interfaz replicada de la web</p>
                 </div>
                 <div
                   @click="${() => this.btnClick("no-diseño")}"
                   class="option"
                 >
-                  <img
-                    class="img-option"
-                    src="../../src/assets/imgs/img-no-diseño.png"
-                    alt=""
-                  />
+                  <img class="img-option" src="./img-no-diseño.png" alt="" />
                   <p>No necesito diseño</p>
                 </div>
               </div>

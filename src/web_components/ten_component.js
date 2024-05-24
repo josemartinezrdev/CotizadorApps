@@ -45,7 +45,7 @@ class TenComponent extends LitElement {
       ${this.first
         ? html`
             <style>
-              @import "../src/web_components/styles_components.css";
+              @import "./styles_components.css";
             </style>
             <section class="page9">
               <div class="container-top">
@@ -60,7 +60,7 @@ class TenComponent extends LitElement {
                 <div @click="${() => this.btnClick("unico")}" class="option">
                   <img
                     class="img-option"
-                    src="../../src/assets/imgs/img-nativo.png"
+                    src="./img-nativo.png"
                     alt=""
                   />
                   <p>Un único idioma</p>
@@ -68,7 +68,7 @@ class TenComponent extends LitElement {
                 <div @click="${() => this.btnClick("doble")}" class="option">
                   <img
                     class="img-option"
-                    src="../../src/assets/imgs/img-billingue.png"
+                    src="./img-billingue.png"
                     alt=""
                   />
                   <p>Bilingüe</p>
@@ -76,7 +76,7 @@ class TenComponent extends LitElement {
                 <div @click="${() => this.btnClick("triple")}" class="option">
                   <img
                     class="img-option"
-                    src="../../src/assets/imgs/img-trilingüe.png"
+                    src="./img-trilingüe.png"
                     alt=""
                   />
                   <p>Multilingüe</p>

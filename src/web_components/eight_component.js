@@ -45,7 +45,7 @@ class EightComponent extends LitElement {
       ${this.first
         ? html`
             <style>
-              @import "../src/web_components/styles_components.css";
+              @import "./styles_components.css";
             </style>
             <section class="page7">
               <div class="container-top">
@@ -61,22 +61,14 @@ class EightComponent extends LitElement {
                   @click="${() => this.btnClick("perfil-si")}"
                   class="option"
                 >
-                  <img
-                    class="img-option"
-                    src="../../src/assets/imgs/img-si-perfil.png"
-                    alt=""
-                  />
+                  <img class="img-option" src="./img-si-perfil.png" alt="" />
                   <p>Sí</p>
                 </div>
                 <div
                   @click="${() => this.btnClick("perfil-no")}"
                   class="option"
                 >
-                  <img
-                    class="img-option"
-                    src="../../src/assets/imgs/img-no-perfil.png"
-                    alt=""
-                  />
+                  <img class="img-option" src="./img-no-perfil.png" alt="" />
                   <p>No</p>
                 </div>
                 <div
@@ -85,7 +77,7 @@ class EightComponent extends LitElement {
                 >
                   <img
                     class="img-option"
-                    src="../../src/assets/imgs/img-perfil-pregunta.png"
+                    src="./img-perfil-pregunta.png"
                     alt=""
                   />
                   <p>No lo sé</p>

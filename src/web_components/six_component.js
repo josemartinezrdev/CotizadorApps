@@ -48,7 +48,7 @@ class SixComponent extends LitElement {
       ${this.first
         ? html`
             <style>
-              @import "../src/web_components/styles_components.css";
+              @import "./styles_components.css";
             </style>
             <section class="page5">
               <div class="container-top">
@@ -61,27 +61,15 @@ class SixComponent extends LitElement {
               <h1>¿Tu App necesita un sistema de login?</h1>
               <div class="container-option">
                 <div @click="${() => this.btnClick("redes")}" class="option">
-                  <img
-                    class="img-option"
-                    src="../../src/assets/imgs/img-redes-login.png"
-                    alt=""
-                  />
+                  <img class="img-option" src="./img-redes-login.png" alt="" />
                   <p>Sí, con redese sociales y email</p>
                 </div>
                 <div @click="${() => this.btnClick("email")}" class="option">
-                  <img
-                    class="img-option"
-                    src="../../src/assets/imgs/img-email-login.png"
-                    alt=""
-                  />
+                  <img class="img-option" src="./img-email-login.png" alt="" />
                   <p>Sí, con email</p>
                 </div>
                 <div @click="${() => this.btnClick("no-login")}" class="option">
-                  <img
-                    class="img-option"
-                    src="../../src/assets/imgs/img-no-login.png"
-                    alt=""
-                  />
+                  <img class="img-option" src="./img-no-login.png" alt="" />
                   <p>No</p>
                 </div>
                 <div
@@ -90,7 +78,7 @@ class SixComponent extends LitElement {
                 >
                   <img
                     class="img-option"
-                    src="../../src/assets/imgs/img-login-pregunta.png"
+                    src="./img-login-pregunta.png"
                     alt=""
                   />
                   <p>No lo sé todavía</p>

@@ -48,7 +48,7 @@ class ElevenComponent extends LitElement {
       ${this.first
         ? html`
             <style>
-              @import "../src/web_components/styles_components.css";
+              @import "./styles_components.css";
             </style>
             <section class="page10">
               <div class="container-top">
@@ -61,19 +61,11 @@ class ElevenComponent extends LitElement {
               <h1>¿En qué estado se encuentra tu proyecto?</h1>
               <div class="container-option">
                 <div @click="${() => this.btnClick("idea")}" class="option">
-                  <img
-                    class="img-option"
-                    src="../../src/assets/imgs/img-app-idea.png"
-                    alt=""
-                  />
+                  <img class="img-option" src="./img-app-idea.png" alt="" />
                   <p>Sólo es una idea</p>
                 </div>
                 <div @click="${() => this.btnClick("boceto")}" class="option">
-                  <img
-                    class="img-option"
-                    src="../../src/assets/imgs/img-app-boceto.png"
-                    alt=""
-                  />
+                  <img class="img-option" src="./img-app-boceto.png" alt="" />
                   <p>Boseto ya preparado</p>
                 </div>
                 <div
@@ -82,7 +74,7 @@ class ElevenComponent extends LitElement {
                 >
                   <img
                     class="img-option"
-                    src="../../src/assets/imgs/img-app-desarrollo.png"
+                    src="./img-app-desarrollo.png"
                     alt=""
                   />
                   <p>App en desarrollo</p>
@@ -93,7 +85,7 @@ class ElevenComponent extends LitElement {
                 >
                   <img
                     class="img-option"
-                    src="../../src/assets/imgs/img-app-desarrollada.png"
+                    src="./img-app-desarrollada.png"
                     alt=""
                   />
                   <p>App ya desarrollada</p>

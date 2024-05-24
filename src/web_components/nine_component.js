@@ -45,7 +45,7 @@ class NineComponent extends LitElement {
       ${this.first
         ? html`
             <style>
-              @import "../src/web_components/styles_components.css";
+              @import "./styles_components.css";
             </style>
             <section class="page8">
               <div class="container-top">
@@ -58,19 +58,11 @@ class NineComponent extends LitElement {
               <h1>¿Tu App necesita un panel de administración?</h1>
               <div class="container-option">
                 <div @click="${() => this.btnClick("panel-si")}" class="option">
-                  <img
-                    class="img-option"
-                    src="../../src/assets/imgs/img-si-panel.png"
-                    alt=""
-                  />
+                  <img class="img-option" src="./img-si-panel.png" alt="" />
                   <p>Sí</p>
                 </div>
                 <div @click="${() => this.btnClick("panel-no")}" class="option">
-                  <img
-                    class="img-option"
-                    src="../../src/assets/imgs/img-no-panel.png"
-                    alt=""
-                  />
+                  <img class="img-option" src="./img-no-panel.png" alt="" />
                   <p>No</p>
                 </div>
                 <div
@@ -79,7 +71,7 @@ class NineComponent extends LitElement {
                 >
                   <img
                     class="img-option"
-                    src="../../src/assets/imgs/img-panel-pregunta.png"
+                    src="./img-panel-pregunta.png"
                     alt=""
                   />
                   <p>No lo sé</p>

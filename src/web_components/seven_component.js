@@ -45,7 +45,7 @@ class SevenComponent extends LitElement {
       ${this.first
         ? html`
             <style>
-              @import "../src/web_components/styles_components.css";
+              @import "./styles_components.css";
             </style>
             <section class="page6">
               <div class="container-top">
@@ -61,22 +61,14 @@ class SevenComponent extends LitElement {
                   @click="${() => this.btnClick("integrada-si")}"
                   class="option"
                 >
-                  <img
-                    class="img-option"
-                    src="../../src/assets/imgs/img-si-integrada.png"
-                    alt=""
-                  />
+                  <img class="img-option" src="./img-si-integrada.png" alt="" />
                   <p>Sí</p>
                 </div>
                 <div
                   @click="${() => this.btnClick("integrada-no")}"
                   class="option"
                 >
-                  <img
-                    class="img-option"
-                    src="../../src/assets/imgs/img-no-integrada.png"
-                    alt=""
-                  />
+                  <img class="img-option" src="./img-no-integrada.png" alt="" />
                   <p>No</p>
                 </div>
                 <div
@@ -85,7 +77,7 @@ class SevenComponent extends LitElement {
                 >
                   <img
                     class="img-option"
-                    src="../../src/assets/imgs/img-integrada-pregunta.png"
+                    src="./img-integrada-pregunta.png"
                     alt=""
                   />
                   <p>No lo sé</p>

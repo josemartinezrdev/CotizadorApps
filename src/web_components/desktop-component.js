@@ -47,7 +47,7 @@ class DeskComponent extends LitElement {
   render() {
     return html`
       <style>
-        @import "../../src/web_components/styles_components.css";
+        @import "./styles_components.css";
       </style>
       ${this.first
         ? html`
@@ -62,27 +62,15 @@ class DeskComponent extends LitElement {
               <h1>¿Elige una Opción?</h1>
               <div class="container-option">
                 <div @click="${() => this.btnClick("pwd")}" class="option">
-                  <img
-                    class="img-option"
-                    src="../assets/imgs/img-app-pwd.png"
-                    alt=""
-                  />
+                  <img class="img-option" src="./img-app-pwd.png" alt="" />
                   <p>PWA</p>
                 </div>
                 <div @click="${() => this.btnClick("spa")}" class="option">
-                  <img
-                    class="img-option"
-                    src="./assets/imgs/img-app-spa.png"
-                    alt=""
-                  />
+                  <img class="img-option" src="./img-app-spa.png" alt="" />
                   <p>SPA</p>
                 </div>
                 <div @click="${() => this.btnClick("nativa")}" class="option">
-                  <img
-                    class="img-option"
-                    src="../../src/assets/imgs/img-app-nativa.png"
-                    alt=""
-                  />
+                  <img class="img-option" src="./img-app-nativa.png" alt="" />
                   <p>Nativa</p>
                 </div>
                 <div class="vacio"></div>
